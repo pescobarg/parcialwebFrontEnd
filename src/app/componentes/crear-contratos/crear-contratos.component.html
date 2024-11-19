@@ -1,0 +1,50 @@
+<div class="form-container">
+    <form [formGroup]="contratoForm" (ngSubmit)="crearContrato()">
+      <div>
+        <label for="identificador">Identificador</label>
+        <input id="identificador" formControlName="identificador" type="text" />
+      </div>
+  
+      <div>
+        <label for="valor">Valor</label>
+        <input id="valor" formControlName="valor" type="number" />
+      </div>
+  
+      <div>
+        <label for="nombreContratante">Nombre contratante</label>
+        <input id="nombreContratante" formControlName="nombreContratante" type="text" />
+      </div>
+  
+      <div>
+        <label for="documentoContratante">Documento contratante</label>
+        <input id="documentoContratante" formControlName="documentoContratante" type="text" />
+      </div>
+  
+      <div>
+        <label for="nombreContratantista">Nombre contratantista</label>
+        <input id="nombreContratantista" formControlName="nombreContratantista" type="text" />
+      </div>
+  
+      <div>
+        <label for="documentoContratantista">Documento contratantista</label>
+        <input id="documentoContratantista" formControlName="documentoContratantista" type="text" />
+      </div>
+  
+      <div>
+        <label for="fechaInicial">Fecha inicial</label>
+        <input id="fechaInicial" formControlName="fechaInicial" type="date" />
+      </div>
+  
+      <div>
+        <label for="fechaFinal">Fecha final</label>
+        <input id="fechaFinal" formControlName="fechaFinal" type="date" />
+      </div>
+  
+      <button type="submit" [disabled]="!contratoForm.valid">Crear Contrato</button>
+    </form>
+  
+    <button class="mostrar-contratos-button" (click)="irAMostrarContrato()">
+      Mostrar Contratos
+    </button>
+  </div>
+  

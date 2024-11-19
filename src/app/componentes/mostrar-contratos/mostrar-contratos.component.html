@@ -1,0 +1,33 @@
+<div class="contratos-container">
+    <h2>Contratos registrados</h2>
+    <table *ngIf="contratos.length > 0" class="contratos-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Identificador</th>
+                <th>Valor</th>
+                <th>Nombre contratante</th>
+                <th>Documento contratante</th>
+                <th>Nombre contratantista</th>
+                <th>Documento contratantista</th>
+                <th>Fecha inicial</th>
+                <th>Fecha final</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let contrato of contratos">
+                <td>{{ contrato.id }}</td>
+                <td>{{ contrato.identificador }}</td>
+                <td>{{ contrato.valor }}</td>
+                <td>{{ contrato.nombreContratante }}</td>
+                <td>{{ contrato.documentoContratante }}</td>
+                <td>{{ contrato.nombreContratantista }}</td>
+                <td>{{ contrato.documentoContratantista }}</td>
+                <td>{{ contrato.fechaInicial | date: 'shortDate' }}</td>
+                <td>{{ contrato.fechaFinal | date: 'shortDate' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="volver-button" (click)="irACrearContrato()">Volver</button>
+</div>
